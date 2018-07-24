@@ -19,16 +19,16 @@ import multiprocessing
 
 import six
 import tensorflow as tf
-
+from tensorflow.python.lib.io import file_io
 
 import numpy as np
 # Get unique data entries per column to calcualte hash size
-with open('bucketSize.csv', 'r') as file:
+with file_io.FileIO('bucketSize.csv', 'r') as file:
     _UNIQUE_COUNTS = file.read().split(',')
 _HASH_BUCKET_SIZE = [3*int(i) for i in _UNIQUE_COUNTS[2:]]
 
 # get feature types: int or float
-with open('features.csv', 'r') as file:
+with file_io.FileIO('features.csv', 'r') as file:
     features = file.read().split(',')
 IS_WIDE = [True if _ == 'int64' else False for _ in features[2:]]
 
