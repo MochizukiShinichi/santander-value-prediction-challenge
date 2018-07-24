@@ -1,5 +1,5 @@
 # Santander Value Prediction Challenge -- Kaggle Competetion
-Wide-Deep-NN for value prediction adapted from census sample 
+Wide-Deep-NN for value prediction adapted from census sample
 https://github.com/GoogleCloudPlatform/cloudml-samples/tree/master/cloudml-template/examples/census-classification
 ## Problem Description 
 https://www.kaggle.com/c/santander-value-prediction-challenge
